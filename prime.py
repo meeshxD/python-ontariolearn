@@ -1,6 +1,11 @@
 import pytest
 def generate_prime_factors(n):
+    if (not isinstance(n,int)):
+        raise ValueError("Wrong data type, must be an integer")
+
     prime_factors = []
+    if n == 1:
+        return prime_factors
     prime_factors.append(n)
     if n == 2:
         return prime_factors
@@ -23,4 +28,3 @@ def generate_prime_factors(n):
             else:
                 x += 1
     return prime_factors
-
